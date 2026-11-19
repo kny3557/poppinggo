@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Popping (팝핑) - 대한민국 팝업스토어 소식</title>
+  <!-- Google Fonts: Fredoka & Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Mobile Viewport Wrapper -->
+  <div class="app-viewport">
+
+    <!-- ======================================================================
+         SCREEN 1: INTRO (첫 화면)
+         ====================================================================== -->
+    <div id="screen-intro" class="screen active">
+      <div class="intro-hero">
+        <div class="brand-logo-badge">
+          <span>🍿</span> 대한민국 팝업 큐레이터
+        </div>
+        <h1 class="intro-title brand-font">Popping<span>!</span></h1>
+        <p class="intro-subtitle">각종 팝업을 한 눈에!<br>원하는 팝업을 골라가요!</p>
+
+        <!-- 3D Clay Mood Popcorn Character SVG -->
+        <div class="character-stage">
+          <div class="char-speech-bubble brand-font">
+            어디로 가볼까? 🍿
+          </div>
+          <svg class="popcorn-character" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Clay Shadow Filter -->
+              <filter id="clay-shadow" x="-10%" y="-10%" width="130%" height="130%" filterUnits="userSpaceOnUse">
+                <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#E28F68" flood-opacity="0.3"/>
+              </filter>
+              <!-- Popcorn Body Radial Gradients -->
+              <radialGradient id="popGrad1" cx="35%" cy="30%" r="65%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="55%" stop-color="#FFF8D6"/>
+                <stop offset="100%" stop-color="#F7EF99"/>
+              </radialGradient>
+              <radialGradient id="popGrad2" cx="30%" cy="25%" r="70%">
+                <stop offset="0%" stop-color="#FFFDF5"/>
+                <stop offset="60%" stop-color="#FDEEB3"/>
+                <stop offset="100%" stop-color="#F2DF80"/>
+              </radialGradient>
+              <linearGradient id="cupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ABE188"/>
+                <stop offset="100%" stop-color="#88C463"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Popcorn Top Fluffs (Clay Feel) -->
+            <g filter="url(#clay-shadow)">
+              <circle cx="65" cy="70" r="32" fill="url(#popGrad2)" />
+              <circle cx="135" cy="70" r="32" fill="url(#popGrad2)" />
+              <circle cx="100" cy="50" r="36" fill="url(#popGrad1)" />
+              <circle cx="45" cy="100" r="28" fill="url(#popGrad2)" />
+              <circle cx="155" cy="100" r="28" fill="url(#popGrad2)" />
+              <path d="M50 115 C40 90, 65 60, 95 62 C115 50, 145 60, 150 90 C165 95, 168 125, 150 135 C135 145, 65 145, 50 115 Z" fill="url(#popGrad1)"/>
+            </g>
+
+            <!-- Popcorn Kernel Cup Base -->
+            <path d="M55 125 L65 180 C67 186 72 190 78 190 L122 190 C128 190 133 186 135 180 L145 125 Z" fill="url(#cupGrad)" filter="url(#clay-shadow)"/>
+            <path d="M75 130 L80 185" stroke="#F7EF99" stroke-width="5" stroke-linecap="round"/>
+            <path d="M100 130 L100 185" stroke="#F7EF99" stroke-width="5" stroke-linecap="round"/>
+            <path d="M125 130 L120 185" stroke="#F7EF99" stroke-width="5" stroke-linecap="round"/>
+
+            <!-- Sparkle Butter Piece on Top -->
+            <rect x="90" y="32" width="22" height="18" rx="6" fill="#F78E69" transform="rotate(-12 90 32)" filter="url(#clay-shadow)"/>
+
+            <!-- Cute Eyes & Face (Simple 3D Clay Mood) -->
+            <g>
+              <circle cx="76" cy="112" r="7" fill="#F78E69" fill-opacity="0.55"/>
+              <circle cx="124" cy="112" r="7" fill="#F78E69" fill-opacity="0.55"/>
+              <ellipse cx="85" cy="103" rx="4.5" ry="6" fill="#2D3142"/>
+              <circle cx="83.5" cy="101" r="2" fill="#FFFFFF"/>
+              <ellipse cx="115" cy="103" rx="4.5" ry="6" fill="#2D3142"/>
+              <circle cx="113.5" cy="101" r="2" fill="#FFFFFF"/>
+              <path d="M94 109 Q100 116 106 109" stroke="#2D3142" stroke-width="3" stroke-linecap="round" fill="none"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 3 Feature Chips -->
+        <div class="intro-features">
+          <div class="intro-feat-item">
+            <div class="intro-feat-icon">📍</div>
+            <div class="intro-feat-title">지역별 콕콕</div>
+            <div class="intro-feat-desc">서울·경기 전지역</div>
+          </div>
+          <div class="intro-feat-item">
+            <div class="intro-feat-icon">🗓️</div>
+            <div class="intro-feat-title">1주 캘린더</div>
+            <div class="intro-feat-desc">원하는 일정 쏙</div>
+          </div>
+          <div class="intro-feat-item">
+            <div class="intro-feat-icon">🎟️</div>
+            <div class="intro-feat-title">예약 정보</div>
+            <div class="intro-feat-desc">필수/가능 여부</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Button (Big) -->
+      <div class="intro-footer">
+        <button id="btn-start" class="btn btn-large brand-font">
+          팝업 알아보기! ✨
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ======================================================================
+         SCREEN 2: INPUT / FILTERS (입력 화면)
+         ====================================================================== -->
+    <div id="screen-input" class="screen">
+      <!-- App Header -->
+      <div class="app-header">
+        <button id="btn-back-to-intro" class="btn-icon" aria-label="이전">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="header-title-box">
+          <span class="header-title">조건 선택하기</span>
+        </div>
+        <div style="width: 40px;"></div> <!-- Spacer -->
+      </div>
+
+      <div class="input-content">
+        <!-- Friendly Poppy Greeting Card -->
+        <div class="greeting-card">
+          <svg class="greeting-avatar" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="45" fill="#ABE188" />
+            <circle cx="38" cy="42" r="16" fill="#F7EF99" />
+            <circle cx="62" cy="42" r="16" fill="#F7EF99" />
+            <circle cx="50" cy="35" r="18" fill="#FFFDF5" />
+            <circle cx="44" cy="48" r="3" fill="#2D3142" />
+            <circle cx="56" cy="48" r="3" fill="#2D3142" />
+            <circle cx="39" cy="53" r="4" fill="#F78E69" fill-opacity="0.6"/>
+            <circle cx="61" cy="53" r="4" fill="#F78E69" fill-opacity="0.6"/>
+            <path d="M47 54 Q50 58 53 54" stroke="#2D3142" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="greeting-text">
+            <b>팝핑이</b>가 딱 맞는 팝업을 골라줄게!<br>
+            가고 싶은 지역, 날짜, 카테고리를 알려줘 🍿
+          </div>
+        </div>
+
+        <!-- 1. Region Selection -->
+        <div class="form-group" id="group-region">
+          <label class="section-title">
+            <span class="step-num">1</span>
+            팝업 가고 싶은 지역
+          </label>
+          <div class="dropdown-row">
+            <div class="select-wrapper">
+              <select id="select-province" class="custom-select">
+                <option value="" disabled selected>시/도 선택</option>
+                <option value="seoul">서울특별시</option>
+                <option value="gyeonggi">경기도</option>
+              </select>
+            </div>
+            <div class="select-wrapper">
+              <select id="select-district" class="custom-select" disabled>
+                <option value="" disabled selected>구/시·군 선택</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Date Range Calendar (1-week selection) -->
+        <div class="form-group" id="group-date">
+          <label class="section-title">
+            <span class="step-num">2</span>
+            팝업 열리는 날짜 범위 (1주 단위)
+          </label>
+
+          <div class="calendar-container">
+            <!-- Cal Month Header -->
+            <div class="cal-header">
+              <span id="cal-month-label" class="cal-month-label">2026년 11월</span>
+              <div class="cal-nav-btns">
+                <button type="button" id="cal-prev" class="cal-nav-btn" aria-label="이전 달">◀</button>
+                <button type="button" id="cal-next" class="cal-nav-btn" aria-label="다음 달">▶</button>
+              </div>
+            </div>
+
+            <!-- Quick Week Presets -->
+            <div class="quick-week-buttons">
+              <button type="button" class="quick-week-chip" data-offset="0">✨ 이번 주</button>
+              <button type="button" class="quick-week-chip" data-offset="7">👉 다음 주</button>
+              <button type="button" class="quick-week-chip" data-offset="14">🚀 2주 뒤</button>
+              <button type="button" class="quick-week-chip" data-offset="-7">⏪ 지난 주</button>
+            </div>
+
+            <!-- Weekdays -->
+            <div class="cal-weekdays">
+              <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+            </div>
+
+            <!-- Calendar Days Grid -->
+            <div id="cal-grid" class="cal-grid"></div>
+
+            <!-- Selected Range Info Box -->
+            <div class="cal-range-info">
+              <span style="color: var(--text-muted);">선택된 1주간</span>
+              <span id="cal-selected-text" class="cal-range-badge">날짜를 클릭해 1주를 선택해줘!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Category Selection -->
+        <div class="form-group" id="group-category">
+          <label class="section-title">
+            <span class="step-num">3</span>
+            팝업 카테고리
+          </label>
+          <div class="select-wrapper">
+            <select id="select-category" class="custom-select">
+              <option value="" disabled selected>카테고리를 선택해줘</option>
+              <option value="뷰티">💄 뷰티 (화장품, 스킨케어, 팝업)</option>
+              <option value="게임">🎮 게임 (체험존, e스포츠, 콜라보)</option>
+              <option value="애니메이션">🎨 애니메이션 (캐릭터, 굿즈샵)</option>
+              <option value="패션">👗 패션 (스트릿, 브랜드쇼룸, 의류)</option>
+              <option value="음식">🍔 음식 (디저트, F&B, 베이커리)</option>
+              <option value="기타">🎪 기타 (라이프스타일, 전시, 체험)</option>
+            </select>
+          </div>
+
+          <!-- Quick Category Visual Pills -->
+          <div class="category-chips-grid">
+            <button type="button" class="cat-pill" data-cat="뷰티">
+              <span class="cat-icon">💄</span>
+              <span>뷰티</span>
+            </button>
+            <button type="button" class="cat-pill" data-cat="게임">
+              <span class="cat-icon">🎮</span>
+              <span>게임</span>
+            </button>
+            <button type="button" class="cat-pill" data-cat="애니메이션">
+              <span class="cat-icon">🎨</span>
+              <span>애니</span>
+            </button>
+            <button type="button" class="cat-pill" data-cat="패션">
+              <span class="cat-icon">👗</span>
+              <span>패션</span>
+            </button>
+            <button type="button" class="cat-pill" data-cat="음식">
+              <span class="cat-icon">🍔</span>
+              <span>음식</span>
+            </button>
+            <button type="button" class="cat-pill" data-cat="기타">
+              <span class="cat-icon">🎪</span>
+              <span>기타</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sticky Bottom Action Button -->
+      <div class="bottom-action-bar">
+        <button id="btn-search" class="btn btn-large brand-font">
+          팝업 알아보기! 🔍
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ======================================================================
+         SCREEN 3: RESULT LIST (결과 화면)
+         ====================================================================== -->
+    <div id="screen-result" class="screen">
+      <!-- App Header -->
+      <div class="app-header">
+        <button id="btn-back-to-input" class="btn-icon" aria-label="조건 다시 선택">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="header-title-box">
+          <span class="header-title">추천 팝업 목록</span>
+        </div>
+        <button id="btn-header-reset" class="btn btn-sm">다시 찾기</button>
+      </div>
+
+      <!-- Filter Conditions Summary -->
+      <div class="result-summary-bar">
+        <div class="result-summary-tags" id="result-summary-tags"></div>
+      </div>
+
+      <!-- Sorting Info Bar (Requirement: 가장 최근에 마감되는 팝업 목록) -->
+      <div class="result-sort-info">
+        <span>총 <b id="result-count" style="color: var(--text-main);">0</b>개의 팝업을 찾았어요!</span>
+        <span class="sort-indicator">⏰ 마감 임박순 정렬</span>
+      </div>
+
+      <!-- Dynamic Popup Cards List -->
+      <div id="popup-list" class="popup-list"></div>
+
+      <!-- Sticky Bottom Action: 다시 알아보기 -->
+      <div class="bottom-action-bar">
+        <button id="btn-retry" class="btn btn-large btn-main-color brand-font">
+          🔄 다시 알아보기
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ======================================================================
+         TOAST / VALIDATION POPUP (친근하고 다정한 말투)
+         ====================================================================== -->
+    <div id="toast-alert" class="toast-overlay">
+      <svg class="toast-avatar" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="45" fill="#F78E69"/>
+        <circle cx="38" cy="40" r="14" fill="#FFFDF5"/>
+        <circle cx="62" cy="40" r="14" fill="#FFFDF5"/>
+        <circle cx="50" cy="30" r="16" fill="#FFFDF5"/>
+        <circle cx="43" cy="44" r="3" fill="#2D3142"/>
+        <circle cx="57" cy="44" r="3" fill="#2D3142"/>
+        <ellipse cx="50" cy="55" rx="5" ry="4" fill="#FFFFFF"/>
+      </svg>
+      <div id="toast-msg" class="toast-msg">
+        앗! 날짜 범위를 선택해줘 🍿
+      </div>
+    </div>
+
+
+    <!-- ======================================================================
+         POPUP DETAIL MODAL
+         ====================================================================== -->
+    <div id="popup-modal" class="modal-backdrop">
+      <div class="modal-sheet">
+        <div class="modal-bar-handle"></div>
+        <img id="modal-img" src="" alt="팝업 이미지" class="modal-thumb" />
+        
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span id="modal-cat-chip" class="chip chip-category">카테고리</span>
+          <span id="modal-reserve-badge" class="chip">예약 상태</span>
+        </div>
+
+        <h3 id="modal-title" style="font-size:1.25rem; font-weight:800; color:var(--text-main); margin-bottom:8px;"></h3>
+        <p id="modal-desc" style="font-size:0.88rem; color:#555; line-height:1.5; margin-bottom:14px; word-break:keep-all;"></p>
+        
+        <div style="background:#FAF8F2; padding:12px; border-radius:14px; font-size:0.82rem; margin-bottom:18px;">
+          <div style="margin-bottom:6px;">📍 <b>상세 장소:</b> <span id="modal-location"></span></div>
+          <div style="margin-bottom:6px;">🗓️ <b>운영 기간:</b> <span id="modal-period"></span></div>
+          <div>🎟️ <b>입장 팁:</b> <span id="modal-tip"></span></div>
+        </div>
+
+        <button type="button" id="btn-modal-close" class="btn btn-large" style="padding:14px; font-size:1rem;">
+          확인 완료! 🍿
+        </button>
+      </div>
+    </div>
+
+  </div> <!-- /app-viewport -->
+
+  <!-- External Script -->
+  <script src="app.js"></script>
+</body>
+</html>
